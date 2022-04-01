@@ -16,4 +16,4 @@ jobs:
       - name: get pods in default namespace    
         run: doctl kubernetes cluster list
       - name: get apps
-        run: doctl apps get
+        run: doctl apps list
