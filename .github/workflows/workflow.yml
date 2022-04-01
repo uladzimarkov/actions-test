@@ -13,3 +13,5 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: get pods in default namespace    
+        run: kubectl get pods 
