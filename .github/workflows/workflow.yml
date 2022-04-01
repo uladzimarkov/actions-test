@@ -20,4 +20,4 @@ jobs:
       - name: show context
         run: kubectl config get-contexts
       - name: get pods
-        run: kubectl get pods
+        run: kubectl get pods -n dev-namespace
