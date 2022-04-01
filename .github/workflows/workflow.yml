@@ -13,7 +13,9 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-      - name: get pods in default namespace    
+      - name: get cluster in default namespace    
         run: doctl kubernetes cluster list
-      - name: get apps
-        run: doctl apps list
+      - name: genreta kubeconfig
+        run: doctl kubernetes cluster kubeconfig save do-fra1-k8s-1-19-3-do-3-fra1-1611675792046
+      - name: show context
+        run: kubectl config get-contexts
