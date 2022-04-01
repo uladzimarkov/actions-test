@@ -16,6 +16,6 @@ jobs:
       - name: get cluster in default namespace    
         run: doctl kubernetes cluster list
       - name: genreta kubeconfig
-        run: doctl kubernetes cluster kubeconfig save do-fra1-k8s-1-19-3-do-3-fra1-1611675792046
+        run: doctl kubernetes cluster kubeconfig save k8s-1-19-3-do-3-fra1-1611675792046
       - name: show context
         run: kubectl config get-contexts
