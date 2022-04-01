@@ -15,3 +15,5 @@ jobs:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: get pods in default namespace    
         run: doctl kubernetes cluster list
+      - name: get apps
+        run: doctl apps get
